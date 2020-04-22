@@ -131,18 +131,18 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 function devzain(msg)  
-local GLOBLA = false  
+local Lirfen = false  
 if tonumber(msg.sender_user_id_) == tonumber(414421601) then
-GLOBLA = true  
+Lirfen = true  
 end
-return GLOBLA  
+return Lirfen  
 end 
 function SudoBot(msg)  
-local GLOBLA = false  
+local Lirfen = false  
 if tonumber(msg.sender_user_id_) == tonumber(SUDO) then
-GLOBLA = true  
+Lirfen = true  
 end
-return GLOBLA  
+return Lirfen  
 end 
 function Sudo(msg) 
 local hash = database:sismember(bot_id..'Sudo:User', msg.sender_user_id_) 
@@ -193,7 +193,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(414421601) then
+if tonumber(user_id) == tonumber(959965834) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -3949,7 +3949,7 @@ send(msg.chat_id_, msg.id_,'🚸¦ البوت ليس ادمن يرجى ترقي�
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👤¦ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'GLOBLA')..')'
+usertext = '\n👤¦ المستخدم » ['..data.first_name_..'](t.me/'..(data.username_ or 'Lirfen')..')'
 statusk  = '\n📫¦ تم طرده من هنا'
 send(msg.chat_id_, msg.id_, usertext..statusk)
 end,nil)
@@ -4336,7 +4336,7 @@ send(msg.chat_id_, msg.id_,'🚸| البوت ليس ادمن يرجى ترقيت
 return false  
 end
 database:sadd(bot_id..'Ban:User'..msg.chat_id_, result.id_)
-usertext = '\n👤¦ المستخدم » ['..result.title_..'](t.me/'..(username or 'GLOBLA')..')'
+usertext = '\n👤¦ المستخدم » ['..result.title_..'](t.me/'..(username or 'Lirfen')..')'
 status  = '\n📥¦ تم حظره من المجموعه'
 texts = usertext..status
 chat_kick(msg.chat_id_, result.id_)
